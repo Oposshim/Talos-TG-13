@@ -61,6 +61,15 @@
 	. = ..()
 	if(building)
 		setDir(ndir)
+	switch(dir)
+		if(NORTH)
+			pixel_y = 17
+		if(SOUTH)
+			pixel_y = 0
+		if(EAST)
+			pixel_x = 5
+		if(WEST)
+			pixel_x = -5
 
 /obj/structure/light_construct/Destroy()
 	QDEL_NULL(cell)
@@ -313,6 +322,16 @@
 
 	if(start_with_cell && !no_emergency)
 		cell = new/obj/item/stock_parts/cell/emergency_light(src)
+
+	switch(dir)
+		if(NORTH)
+			pixel_y = 17
+		if(SOUTH)
+			pixel_y = 0
+		if(EAST)
+			pixel_x = 5
+		if(WEST)
+			pixel_x = -5
 
 	return INITIALIZE_HINT_LATELOAD
 
