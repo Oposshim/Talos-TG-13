@@ -53,6 +53,15 @@
 
 /obj/machinery/camera/Initialize(mapload, obj/structure/camera_assembly/CA)
 	. = ..()
+	switch(dir)
+		if(NORTH)
+			pixel_y = 0
+		if(SOUTH)
+			pixel_y = 17
+		if(EAST)
+			pixel_x = -5
+		if(WEST)
+			pixel_x = 5
 	for(var/i in network)
 		network -= i
 		network += lowertext(i)
