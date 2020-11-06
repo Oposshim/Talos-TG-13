@@ -124,6 +124,48 @@
 	turf_type = /turf/open/floor/wood
 	resistance_flags = FLAMMABLE
 
+//Concrete
+/obj/item/stack/tile/concrete
+	name = "concrete tile"
+	singular_name = "concrete tile"
+	desc = "A gloriously elegant concrete and gold trim floor tile."
+	icon_state = "tile-concrete"
+	turf_type = /turf/open/floor/talos/concrete
+
+/obj/item/stack/tile/concrete/small
+	name = "small concrete tile"
+	singular_name = "small concrete tile"
+	desc = "A gloriously elegant concrete and gold trim, small floor tile."
+	turf_type = /turf/open/floor/talos/concrete/small
+
+/obj/item/stack/tile/concrete/line
+	name = "lined concrete tile"
+	singular_name = "lined concrete tile"
+	desc = "A gloriously elegant concrete and gold trim, lined floor tile."
+	turf_type = /turf/open/floor/talos/concrete/line
+
+/obj/item/stack/tile/concrete/tri
+	name = "tetra concrete tile"
+	singular_name = "tetra concrete tile"
+	desc = "A gloriously elegant concrete and gold trim, tetrahedronic floor tile."
+	turf_type = /turf/open/floor/talos/concrete/tri
+
+/obj/item/stack/tile/concrete/tri/side
+	turf_type = /turf/open/floor/talos/concrete/triside
+
+//Marble
+/obj/item/stack/tile/marble
+	name = "marble slab"
+	singular_name = "marble slab"
+	desc = "A gloriously elegant marble floor tile."
+	icon_state = "tile-marble"
+	turf_type = /turf/open/floor/talos/marble
+
+/obj/item/stack/tile/marble/small
+	name = "small marble slab"
+	singular_name = "small marble slab"
+	turf_type = /turf/open/floor/talos/marble/small
+
 //Basalt
 /obj/item/stack/tile/basalt
 	name = "basalt tile"
