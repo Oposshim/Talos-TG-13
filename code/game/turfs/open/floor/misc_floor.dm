@@ -185,3 +185,41 @@
 
 /turf/open/floor/plating/rust/rust_heretic_act()
 	return
+
+//Talos-13 Floor Tiles
+
+/turf/open/floor/talos
+	icon = 'icons/turf/talos-floors.dmi'
+
+/turf/open/floor/talos/marble
+	name = "marble slab"
+	desc = "A gloriously elegant large marble slab."
+	icon_state = "marble-large"
+	floor_tile = /obj/item/stack/tile/marble
+
+/turf/open/floor/talos/marble/small
+	desc = "A gloriously elegant small marble slab."
+	icon_state = "marble-small"
+	floor_tile = /obj/item/stack/tile/marble/small
+
+/turf/open/floor/talos/concrete
+	name = "concrete tile"
+	desc = "A gloriously elegant concrete and gold trim floor tile."
+	icon_state = "concrete-large"
+	floor_tile = /obj/item/stack/tile/concrete
+
+/turf/open/floor/talos/concrete/small
+	icon_state = "concrete-small"
+	floor_tile = /obj/item/stack/tile/concrete/small
+
+/turf/open/floor/talos/concrete/line
+	icon_state = "concrete-line"
+	floor_tile = /obj/item/stack/tile/concrete/line
+
+/turf/open/floor/talos/concrete/tri
+	icon_state = "concrete-tri"
+	floor_tile = /obj/item/stack/tile/concrete/tri
+
+/turf/open/floor/talos/concrete/triside
+	icon_state = "concrete-tri-2"
+	floor_tile = /obj/item/stack/tile/concrete/tri/side
