@@ -271,11 +271,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_BODY_ANTAG]'>When Antagonist: [(randomise[RANDOM_BODY_ANTAG]) ? "Yes" : "No"]</A><br>"
 
 			dat += "<table width='100%'><tr><td width='24%' valign='top'>"
-
+			/*
 			dat += "<b>Species:</b><BR><a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a><BR>"
 			dat += "<a href='?_src_=prefs;preference=species;task=random'>Random Species</A> "
 			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SPECIES]'>Always Random Species: [(randomise[RANDOM_SPECIES]) ? "Yes" : "No"]</A><br>"
-
+			*/
 			dat += "<b>Underwear:</b><BR><a href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a>"
 			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_UNDERWEAR]'>[(randomise[RANDOM_UNDERWEAR]) ? "Lock" : "Unlock"]</A>"
 
@@ -1957,10 +1957,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			return pick(GLOB.ai_names)
 		if("cyborg")
 			return DEFAULT_CYBORG_NAME
-		if("clown")
-			return pick(GLOB.clown_names)
-		if("mime")
-			return pick(GLOB.mime_names)
 		if("religion")
 			return DEFAULT_RELIGION
 		if("deity")
