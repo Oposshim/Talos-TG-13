@@ -211,20 +211,22 @@
 		cb.InvokeAsync()
 	LAZYCLEARLIST(round_end_events)
 
+	RollCredits()
+
 	var/speed_round = FALSE
 	if(world.time - SSticker.round_start_time <= 300 SECONDS)
 		speed_round = TRUE
 
 	for(var/client/C in GLOB.clients)
-		if(!C.credits)
-			C.RollCredits()
 		C.playtitlemusic(40)
+
+		var/popcount = gather_roundend_feedback()
+
+		if(C.prefs.show_report)
+			display_report(popcount)
 		if(speed_round)
 			C.give_award(/datum/award/achievement/misc/speed_round, C.mob)
 		HandleRandomHardcoreScore(C)
-
-	var/popcount = gather_roundend_feedback()
-	display_report(popcount)
 
 	CHECK_TICK
 
