@@ -78,7 +78,7 @@ require only minor tweaks.
 	ZTRAIT_MOON_RUINS = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
 	ZTRAIT_DOWN = -1, \
-	ZTRAIT_BASETURF = "/turf/open/chasm/moon", \
+	ZTRAIT_BASETURF = "/turf/open/floor/plating/asteroid/moon", \
 	ZTRAIT_GRAVITY = 1)
 
 #define ZTRAITS_LAVALAND list(\
