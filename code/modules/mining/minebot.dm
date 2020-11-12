@@ -35,6 +35,7 @@
 	healable = 0
 	loot = list(/obj/effect/decal/cleanable/robot_debris)
 	del_on_death = TRUE
+	light_color = "#00ded4"
 	light_system = MOVABLE_LIGHT
 	light_range = 6
 	light_on = FALSE

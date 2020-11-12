@@ -21,6 +21,7 @@
 	sharpness = SHARP_EDGED
 	actions_types = list(/datum/action/item_action/toggle_light)
 	obj_flags = UNIQUE_RENAME
+	light_color = "#00ded4"
 	light_system = MOVABLE_LIGHT
 	light_range = 5
 	light_on = FALSE

@@ -3,6 +3,7 @@
 	var/turf/target_turf
 	var/fall_message = "GAH! Ah... where are you?"
 	var/oblivion_message = "You stumble and stare into the abyss before you. It stares back, and you fall into the enveloping dark."
+	var/fallable = TRUE //Abyss Z transfer override, good if you want multi-Z things but also chasms
 
 	var/static/list/falling_atoms = list() // Atoms currently falling into chasms
 	var/static/list/forbidden_types = typecacheof(list(
@@ -95,7 +96,7 @@
 	falling_atoms[AM] = (falling_atoms[AM] || 0) + 1
 	var/turf/T = target_turf
 
-	if(T)
+	if(T && fallable)
 		// send to the turf below
 		AM.visible_message("<span class='boldwarning'>[AM] falls into [parent]!</span>", "<span class='userdanger'>[fall_message]</span>")
 		T.visible_message("<span class='boldwarning'>[AM] falls from above!</span>")

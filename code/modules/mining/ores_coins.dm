@@ -136,6 +136,13 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	singular_name = "volcanic ash pile"
 	mine_experience = 0
 
+/obj/item/stack/ore/glass/moon
+	name = "moon sand"
+	icon_state = "moon_sand"
+	inhand_icon_state = "volcanic_sand"
+	singular_name = "moon sand pile"
+	mine_experience = 0
+
 /obj/item/stack/ore/plasma
 	name = "plasma ore"
 	icon_state = "Plasma ore"
