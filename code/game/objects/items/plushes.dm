@@ -534,9 +534,9 @@
 	gender = FEMALE	//given all the jokes and drawings, I'm not sure the xenobiologists would make a slimeboy
 
 /obj/item/toy/plush/awakenedplushie
-	name = "awakened plushie"
-	desc = "An ancient plushie that has grown enlightened to the true nature of reality."
-	icon_state = "plushie_awake"
+	name = "typhon plush"
+	desc = "This begs the question, Is the plush a mimic of a mimic?? or..."
+	icon_state = "plushie_mimic"
 	inhand_icon_state = "plushie_awake"
 
 /obj/item/toy/plush/awakenedplushie/ComponentInitialize()
