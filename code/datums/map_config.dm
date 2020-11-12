@@ -22,7 +22,7 @@
 	var/space_ruin_levels = 7
 	var/space_empty_levels = 1
 
-	var/minetype = "lavaland"
+	var/minetype = "moon"
 
 	var/allow_custom_shuttles = TRUE
 	var/shuttles = list(
@@ -136,6 +136,7 @@
 
 	if ("minetype" in json)
 		minetype = json["minetype"]
+		LoadConfig(filename = "_maps/moon.json")
 
 	allow_custom_shuttles = json["allow_custom_shuttles"] != FALSE
 
