@@ -10,8 +10,8 @@
 #define MEDBOT_PANIC_END	100
 
 /mob/living/simple_animal/bot/medbot
-	name = "\improper Medibot"
-	desc = "A little medical robot. He looks somewhat underwhelmed."
+	name = "\improper Medical Operator"
+	desc = "A Transtar Pyramid 490 Medical class Operator, You're in good hands."
 	icon = 'icons/mob/aibots.dmi'
 	icon_state = "medibot0"
 	density = FALSE
@@ -79,7 +79,7 @@
 
 /mob/living/simple_animal/bot/medbot/derelict
 	name = "\improper Old Medibot"
-	desc = "Looks like it hasn't been modified since the late 2080s."
+	desc = "Looks like it hasn't been modified since the late 2050s."
 	skin = "bezerk"
 	damagetype_healer = "all"
 	heal_threshold = 0
@@ -232,7 +232,7 @@
 	if(assess_patient(H))
 		last_found = world.time
 		if((last_newpatient_speak + 300) < world.time) //Don't spam these messages!
-			var/list/messagevoice = list("Hey, [H.name]! Hold on, I'm coming." = 'sound/voice/medbot/coming.ogg',"Wait [H.name]! I want to help!" = 'sound/voice/medbot/help.ogg',"[H.name], you appear to be injured!" = 'sound/voice/medbot/injured.ogg')
+			var/list/messagevoice = list("Please! Hold still, This will only take a moment." = 'sound/voice/medbot/coming.ogg',"Are you here for an appointment?" = 'sound/voice/medbot/help.ogg',"[H.name], you appear to be injured!" = 'sound/voice/medbot/injured.ogg')
 			var/message = pick(messagevoice)
 			speak(message)
 			playsound(src, messagevoice[message], 50, FALSE)
@@ -347,7 +347,7 @@
 				var/list/i_need_scissors = list('sound/voice/medbot/fuck_you.ogg', 'sound/voice/medbot/turn_off.ogg', 'sound/voice/medbot/im_different.ogg', 'sound/voice/medbot/close.ogg', 'sound/voice/medbot/shindemashou.ogg')
 				playsound(src, pick(i_need_scissors), 70)
 			else
-				var/list/messagevoice = list("Radar, put a mask on!" = 'sound/voice/medbot/radar.ogg',"There's always a catch, and I'm the best there is." = 'sound/voice/medbot/catch.ogg',"I knew it, I should've been a plastic surgeon." = 'sound/voice/medbot/surgeon.ogg',"What kind of medbay is this? Everyone's dropping like flies." = 'sound/voice/medbot/flies.ogg',"Delicious!" = 'sound/voice/medbot/delicious.ogg', "Why are we still here? Just to suffer?" = 'sound/voice/medbot/why.ogg')
+				var/list/messagevoice = list("Are you here for an appointment?" = 'sound/voice/medbot/radar.ogg',"I hope you’re practicing good nutrition and daily exercise!" = 'sound/voice/medbot/catch.ogg',"Don’t forget to complete a patient questionnaire, Your feedback will be invaluable." = 'sound/voice/medbot/surgeon.ogg',"Hello! I'm a Pyramid 490 Medical class Operator." = 'sound/voice/medbot/flies.ogg',"All of my anatomy and procedure files are up to date!" = 'sound/voice/medbot/delicious.ogg', "Why are we still here? Just to suffer?" = 'sound/voice/medbot/why.ogg')
 				var/message = pick(messagevoice)
 				speak(message)
 				playsound(src, messagevoice[message], 50)

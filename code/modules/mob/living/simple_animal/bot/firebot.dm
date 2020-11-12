@@ -5,8 +5,8 @@
 #define FOAM_INTERVAL 50  // Time between deployment of fire fighting foam
 
 /mob/living/simple_animal/bot/firebot
-	name = "\improper Firebot"
-	desc = "A little fire extinguishing bot. He looks rather anxious."
+	name = "\improper Engineering Operator"
+	desc = "A Kobold 410 Engineering class operator, Our station hulls are saved!"
 	icon = 'icons/mob/aibots.dmi'
 	icon_state = "firebot"
 	density = FALSE
@@ -178,10 +178,10 @@
 		return
 
 	if(prob(1) && target_fire == null)
-		var/list/messagevoice = list("No fires detected." = 'sound/voice/firebot/nofires.ogg',
-		"Only you can prevent station fires." = 'sound/voice/firebot/onlyyou.ogg',
-		"Temperature nominal." = 'sound/voice/firebot/tempnominal.ogg',
-		"Keep it cool." = 'sound/voice/firebot/keepitcool.ogg')
+		var/list/messagevoice = list("The cargo bay seizes traffic from our lunar refinery as well as earth... Via self piloting containers." = 'sound/voice/firebot/nofires.ogg',
+		"Hello! I'm a Kobold 410 engineering class Operator." = 'sound/voice/firebot/onlyyou.ogg',
+		"If you're scheduled for complete suit diagonstic, Report to Mr. Good in the hardwarelabs!" = 'sound/voice/firebot/tempnominal.ogg',
+		"All exterior glass is composed of a virtually indestructible polymer. Sudden decompression is unlikely." = 'sound/voice/firebot/keepitcool.ogg')
 		var/message = pick(messagevoice)
 		speak(message)
 		playsound(src, messagevoice[message], 50)
@@ -208,10 +208,10 @@
 	if(target_fire && (get_dist(src, target_fire) <= (emagged == 2 ? 1 : 2))) // Make the bot spray water from afar when not emagged
 		if((speech_cooldown + SPEECH_INTERVAL) < world.time)
 			if(ishuman(target_fire))
-				speak("Stop, drop and roll!")
+				speak("Your suit integrity is compromised!")
 				playsound(src, 'sound/voice/firebot/stopdropnroll.ogg', 50, FALSE)
 			else
-				speak("Extinguishing!")
+				speak("Too many moving parts! shield your eyes!")
 				playsound(src, 'sound/voice/firebot/extinguishing.ogg', 50, FALSE)
 			speech_cooldown = world.time
 
@@ -264,7 +264,7 @@
 
 	if(is_burning(scan_target))
 		if((detected_cooldown + DETECTED_VOICE_INTERVAL) < world.time)
-			speak("Fire detected!")
+			speak("Careful, Watchout!")
 			playsound(src, 'sound/voice/firebot/detected.ogg', 50, FALSE)
 			detected_cooldown = world.time
 		result = scan_target
