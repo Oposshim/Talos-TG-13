@@ -112,6 +112,10 @@
 	initial_gas_mix = AIRLESS_ATMOS
 	old_rock = FALSE
 	old_scan = FALSE
+	mineralChance = 25
+	mineralSpawnChanceList = list(
+		/obj/item/stack/ore/uranium = 35, /obj/item/stack/ore/diamond = 30, /obj/item/stack/ore/gold = 45, /obj/item/stack/ore/titanium = 45,
+		/obj/item/stack/ore/silver = 50, /obj/item/stack/ore/plasma = 50, /obj/item/stack/ore/bluespace_crystal = 20)
 
 /turf/closed/mineral/random/high_chance/moon/lowest
 	/turf/open/floor/plating/asteroid/moon/lowest
